@@ -38,7 +38,7 @@ def sentences(user_text)
 end
 
 def paragraphs(user_text)
-    paragraph_count = user_text.split(/\n\n/).length
+    paragraph_count = user_text.split(/\r\n/).length
     return "#{paragraph_count} paragraphs"
 end
 
