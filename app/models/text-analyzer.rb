@@ -1,8 +1,11 @@
 #lines = File.readlines("text.txt") #uses readlines method to push lines into an array
 
 sample = "Among other public buildings in a certain town, which for many 
+
 reasons it will be prudent to refrain from mentioning, and to 
+
 which I will assign no fictitious name, there is one anciently 
+
 common to most towns, great or small: to wit, a workhouse; and 
 in this workhouse was born; on a day and date which I need not 
 trouble myself to repeat, inasmuch as it can be of no possible 
@@ -12,9 +15,11 @@ of this chapter."
 
 
 def linecount(user_text)
-    lines = user_text.split("\n")
-    line_count = lines.size
+    lines = user_text.split("\r\n")
+    lines.delete("")
+    line_count = lines.length
     return "#{line_count} lines"
+    #return lines
 end
 
 def totalchars(user_text)
@@ -38,7 +43,7 @@ def sentences(user_text)
 end
 
 def paragraphs(user_text)
-    paragraph_count = user_text.split(/\r\r/).length
+    paragraph_count = user_text.split(/\r\n\r\n/).length
     return "#{paragraph_count} paragraphs"
 end
 
@@ -63,7 +68,7 @@ def keywords(user_text)
 end
 
 
-
+p linecount(sample)
 
 =begin
 puts "this is a test".scan(/\w/).join

@@ -6,31 +6,10 @@
         </head>
         <body>
             <h1>Text Analyzer</h1>
-            <form method="POST" id="textbox">
+            <form method="POST" action="/results" id="textbox">
                 <textarea rows="10" cols="80" name="textinput" form="textbox">Enter text here...</textarea>
                 <br>
                 <input type="submit" value="Submit">
             </form>
-            <br>
-            <h3><%=@submission%></h3>
-            <%=@user_input%>
-            <h3><%=@analysis%></h3>
-            <%=@lines%>
-            <br>
-            <%=@totalchars%>
-            <br>
-            <%=@nowhites%>
-            <br>
-            <%=@totalwords%>
-            <br>
-            <%=@sentences%>
-            <br>
-            <%=@paragraphs%>
-            <br>
-            <%=@avg_sents%>
-            <br>
-            <%=@avg_words%>
-            <br>
-            <%=@keywords%>
         </body>
 </html>
